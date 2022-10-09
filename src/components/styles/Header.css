@@ -1,0 +1,107 @@
+.iconimg {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+}
+
+.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 5.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 1.8rem;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.searchIcon {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background-color: #39cdcc;
+  height: 2.7rem;
+  width: 3.5rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-se {
+  font-weight: 900;
+  color: white;
+}
+
+.inputSea {
+  height: 2.5rem;
+  width: 30rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 30px;
+  border: 1px solid #e7e5e5;
+}
+
+.inputSea:focus {
+  border: 1px solid #213F7D;
+  outline: 1px solid #213F7D;
+}
+
+.inputSea:hover {
+  border: 1px solid #213F7D;
+}
+
+.userlogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #213F7D;
+  font-family: "Montserrat", sans-serif;
+  width: 230px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.userimg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.imguser {
+  border-radius: 50px;
+}
+
+.userimg p {
+  margin-left: 10px;
+}
+
+.userimg p:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=Header.css.map */

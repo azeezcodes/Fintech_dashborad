@@ -1,0 +1,53 @@
+@import "./Variable.scss";
+.mainside{
+width: 16.5rem;
+border: 1px solid #39cdcc;
+height: calc(100vh - 5.5rem);
+overflow-y: auto;
+
+//padding-left: $paddingLeft;
+
+}
+
+.switchname{
+    display: flex;
+    color: $primary;
+    align-items: center;
+    font-family: $fontfamily;
+    font-size: 1rem;
+    width: 14rem;
+    font-weight: 400;
+    justify-content: space-between;
+    padding-left: $paddingLeft;
+    margin-top: 2rem;
+}
+.iconed{
+    display: flex;
+    color:  #7b8eb4;
+    align-items: center;
+    font-family: $fontfamily;
+    font-size: 1rem;
+    width: 100%;
+    padding-left: $paddingLeft; 
+    height: 3rem;   
+   
+}
+.iconed:hover{
+       background-color: rgba(57, 205, 204, 0.06);
+    border-left: 3px solid #47caca;
+       color: $primary;
+       font-weight: 500;
+}
+
+
+.iconed p{
+    margin-left: 0.6rem;
+}
+.biHead{
+     font-family: $fontfamily;
+      padding-left: $paddingLeft;
+       color: $primary;
+       font-weight: 600;
+       font-size: 12px;
+       margin-top: 2.6rem;
+}

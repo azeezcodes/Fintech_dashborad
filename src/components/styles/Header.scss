@@ -1,0 +1,72 @@
+@import "./Variable.scss";
+
+.iconimg {
+   width: fit-content;
+   height: 30px;
+
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5.5rem;
+    align-items: center;
+    padding: 0px 1.8rem;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.searchIcon{
+    display: grid;
+ place-content: center;
+ background-color:  #39cdcc;
+ height: 2.7rem;
+ width: 3.5rem;
+ border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+.search{
+    display: flex;
+    align-items: center;  
+  
+}
+.icon-se{
+    font-weight: 900;
+    color: white;   
+}
+.inputSea{
+    height: 2.5rem;
+    width: 30rem; 
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding-left: 30px;
+      border: 1px solid rgb(231, 229, 229);
+}
+.inputSea:focus{
+       border:1px solid $primary;
+   outline: 1px solid $primary;
+   
+}
+.inputSea:hover{
+    border: 1px solid $primary;
+}
+.userlogo{
+    display: flex;
+    flex-direction: row;
+  color: $primary;
+ font-family: "Montserrat", sans-serif;
+    width: 230px;
+    align-items: center;
+    justify-content: space-between;
+}
+.userimg{
+    display: flex;
+}
+.imguser{
+    border-radius: 50px;
+}
+.userimg p {
+    margin-left: 10px;
+}
+.userimg p:hover {
+  text-decoration: underline;
+}

@@ -23,7 +23,8 @@ const Login = () => {
                   id="name"
                   name="email"
                   placeholder="Enter email address"
-                  className="email"
+                       className="email"
+                       required
                />
 
                <PasswordInput placeholder="Password" name="password" />

@@ -30,6 +30,7 @@ export const PasswordInput = (props: Button) => {
                placeholder= {props.placeholder}
                className="input-text"
                name={props.name}
+               required
                
             />
             <button className="bg" onClick={first}>
