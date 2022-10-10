@@ -1,0 +1,103 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  overflow-y: auto;
+}
+
+.tablebody {
+  padding: 3.75rem;
+  color: #213F7D;
+}
+
+.boxwithicon {
+  width: 11rem;
+  height: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 1.4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: 0.5px solid rgba(149, 157, 165, 0.2);
+}
+
+.titleBox {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #213F7D;
+}
+
+.titlecount {
+  color: #213F7D;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.purple {
+  border-radius: 50%;
+  background-color: #FBE8FE;
+  color: #DF18FF;
+  font-size: 1.2rem;
+  width: 48px;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.indigo {
+  border-radius: 50%;
+  background-color: #EEE8FD;
+  color: #5718FF;
+  font-size: 1.2rem;
+  width: 48px;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.orange {
+  border-radius: 50%;
+  background-color: #FCEFEC;
+  color: #F55F44;
+  font-size: 1.2rem;
+  width: 48px;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.red {
+  border-radius: 50%;
+  background-color: #FCEBF0;
+  color: #FF3366;
+  font-size: 1.2rem;
+  width: 48px;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.allbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=Table.css.map */

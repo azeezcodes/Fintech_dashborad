@@ -104,4 +104,14 @@
 .userimg p:hover {
   text-decoration: underline;
 }
+
+.contentBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pagechild {
+  width: calc(100vw - 16.5rem);
+}
 /*# sourceMappingURL=Header.css.map */

@@ -1,0 +1,80 @@
+@import "./Variable.scss";
+*{
+    font-family: $fontfamily;
+    overflow-y: auto;
+}
+.tablebody{
+    padding: 3.75rem;
+    color: $primary;
+}
+.boxwithicon{
+    //background-color: red;
+    width: 11rem;
+    height: 9rem;
+    display: flex;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+   flex-direction: column;
+    padding: 1rem 1.4rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 0.5px solid  rgba(149, 157, 165, 0.2);
+}
+.titleBox{
+    font-size: 0.8rem;
+    font-weight: 500;
+       color: $primary;
+}
+.titlecount{
+   color: $primary;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.purple{
+    border-radius: 50%;
+   background-color: #FBE8FE;
+   color: #DF18FF;
+   font-size: 1.2rem;
+   width: 48px;
+   height: 40px;
+   display: grid;
+   place-content: center;
+}
+.indigo{
+ border-radius: 50%;
+   background-color: #EEE8FD;
+   color: #5718FF;
+   font-size: 1.2rem;
+   width: 48px;
+   height: 40px;
+   display: grid;
+   place-content: center;
+}
+.orange{
+ border-radius: 50%;
+   background-color: #FCEFEC;
+   color: #F55F44;
+   font-size: 1.2rem;
+   width: 48px;
+   height: 40px;
+   display: grid;
+   place-content: center;
+}
+.red{
+ border-radius: 50%;
+   background-color: #FCEBF0;
+   color: #FF3366;
+   font-size: 1.2rem;
+   width: 48px;
+   height: 40px;
+   display: grid;
+   place-content: center;
+}
+
+
+
+
+.allbox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

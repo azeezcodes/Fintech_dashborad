@@ -70,3 +70,9 @@
 .userimg p:hover {
   text-decoration: underline;
 }
+.contentBox{
+    display: flex;
+}
+.pagechild{
+    width: calc(100vw - 16.5rem)
+}
