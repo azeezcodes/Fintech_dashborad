@@ -1,16 +1,19 @@
 @import "./Variable.scss";
 *{
     font-family: $fontfamily;
-    overflow-y: auto;
+ 
 }
 .tablebody{
-    padding: 3.75rem;
+    padding: 1.75rem;
     color: $primary;
+    height: 80vh;
+    overflow: scroll;
+    
 }
 .boxwithicon{
     //background-color: red;
     width: 11rem;
-    height: 9rem;
+    height: 8rem;
     display: flex;
 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
    flex-direction: column;
@@ -18,6 +21,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     justify-content: space-between;
     align-items: flex-start;
     border: 0.5px solid  rgba(149, 157, 165, 0.2);
+    margin-bottom: 20px;
 }
 .titleBox{
     font-size: 0.8rem;
@@ -77,4 +81,27 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 20px;
+}
+.alltable{
+    width: 100%;
+    border: 1px solid black;
+}
+.alltable td{
+    text-align: center;
+}
+.taghead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.taghead p{
+    margin-right: 4px;
+    font-size: 0.7rem;
+}
+.tabRoll td{
+   padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    font-size: 0.6rem;
 }

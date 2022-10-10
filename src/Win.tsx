@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from './Layout'
 import Boxicon from './components/Boxicon'
+import Table from "./components/Table"
 import "./components/styles/Table.scss"
 import { HiOutlineUsers, HiOutlineUserGroup } from "react-icons/hi";
 import { TbReport } from "react-icons/tb";
@@ -45,7 +46,9 @@ const Win = () => {
 
         {/* table */}
 
-
+        <div>
+          <Table/>
+        </div>
         {/* table end */}
 
            {/* -----------end */}
