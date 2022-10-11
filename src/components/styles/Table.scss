@@ -85,7 +85,8 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .alltable{
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid #D6DCE7;
+    border-radius: 5px;
 }
 .alltable td{
     text-align: center;
@@ -102,6 +103,50 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 .tabRoll td{
    padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #D6DCE7;
     font-size: 0.6rem;
+}
+.modalorganization{
+    position: absolute;
+    bottom: 150px;
+}
+.workin{
+    display: flex;
+    flex-direction: column;
+    width: 190px;
+    height: 200px;
+    text-align: left;
+    border: 1px solid #D6DCE7;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px 12px;
+    justify-content: space-between;
+}
+.workin input{
+    height: 25px;
+    width: 100%;
+    border-radius: 6px;
+      border: 1px solid #D6DCE7;
+   // margin-left: 12px;
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.bt{
+    height: 30px;
+    width: 50px;
+    background-color: $secondary;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+.bn{
+    height: 30px;
+    width: 50px;
+    background-color: white;
+    border: 1px solid #D6DCE7;
+    color: black;
+    border-radius: 10px;
 }

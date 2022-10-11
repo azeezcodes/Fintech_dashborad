@@ -1,17 +1,24 @@
-import React, {useState, useEffect, ReactNode} from 'react'
-import Tablehead from './Tablehead'
-import {
-   BiFilter
-} from "react-icons/bi";
+import React, {
+   useState,
+   useEffect,
+   ReactNode,
+   useMemo,
+} from "react";
+import Tablehead from "./Tablehead";
 
+import { BiFilter, BiDotsVerticalRounded } from "react-icons/bi";
+import OrganModal from "./OrganModal";
 
 interface RNode {
    children: ReactNode;
 }
 
+let PageSize = 10;
 
 const Table = () => {
-   const [movies, setMovies] = useState([]);
+   const [Data, setData] = useState([]);
+   const [show, setShow] = useState(false)
+   const [currentPage, setCurrentPage] = useState(1);
 
    useEffect(() => {
       fetch(`https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users`)
@@ -23,15 +30,25 @@ const Table = () => {
             }
             return response.json();
          })
-         .then((actualData) => setMovies(actualData))
+         .then((actualData) => setData(actualData))
          .catch((err) => {
             console.log(err.message);
          });
    }, []);
 
-   console.log(movies);
+
+    const currentTableData = useMemo(() => {
+       const firstPageIndex = (currentPage - 1) * PageSize;
+       const lastPageIndex = firstPageIndex + PageSize;
+       return Data.slice(firstPageIndex, lastPageIndex);
+    }, [currentPage]);
+   
+   
    
 
+   const showModal = () => {
+   setShow(!show)
+}
 
    return (
       <div>
@@ -39,9 +56,13 @@ const Table = () => {
             <thead>
                <tr>
                   <th>
-                     <div className="taghead">
+                     <div className="taghead" onClick={showModal}>
                         <p>ORGANIZATION</p>
+
                         <BiFilter />
+                     </div>
+                     <div className="modalorganization">
+                        {show && <OrganModal />}
                      </div>
                   </th>
                   <th>
@@ -81,14 +102,15 @@ const Table = () => {
             </thead>
 
             <tbody>
-
-
-               {
-                  movies.map((item: {id:string, userName: string, email: string, phoneNumber: string, createdAt: string }) => {
+               {Data.map(
+                  (item: {
+                     id: string;
+                     userName: string;
+                     email: string;
+                     phoneNumber: string;
+                     createdAt: string;
+                  }) => {
                      return (
-
-                    
-
                         <tr className="tabRoll" key={item.id}>
                            <td>
                               <p>Lendsqr</p>
@@ -100,21 +122,27 @@ const Table = () => {
                            <td>
                               <p>Active</p>
                            </td>
-                           <td>cccc</td>
+                           <td>
+                              <BiDotsVerticalRounded
+                                 style={{ fontSize: "1.2rem" }}
+                              />
+                           </td>
                         </tr>
                      );
-                  })
-}
-
-
-
-
-               
-              
+                  }
+               )}
             </tbody>
          </table>
+         {/* <Pagination
+            className="pagination-bar"
+            currentPage={currentPage}
+            totalCount={Data.length}
+            pageSize={PageSize}
+            onPageChange={(page) => setCurrentPage(page)}
+         /> */}
+         
       </div>
    );
-}
+};
 
-export default Table
+export default Table;

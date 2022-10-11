@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import {  useNavigate} from "react-router-dom";
 import { PasswordInput } from "./PasswordInput";
 import "./styles/Login.scss";
 
 const Login = () => {
+
+  let navigate = useNavigate();
+
    return (
       <div className="whole">
          <div className="firstSide">
@@ -11,26 +15,34 @@ const Login = () => {
          </div>
 
          <div className="page">
-            <form action="" >
+            <form action="">
                <h1 className="welcometext"> Welcome!</h1>
                <p className="enter">Enter details to login</p>
 
                <img src="/assets/images/Group.png" alt="" />
 
-                   <input
-                       
+               <input
                   type="email"
                   id="name"
                   name="email"
                   placeholder="Enter email address"
-                       className="email"
-                       required
+                  className="email"
+                  required
                />
 
                <PasswordInput placeholder="Password" name="password" />
 
-                   <p className="forgot">FORGOT PASSWORD ?</p>
-               <button type="submit" className="login">Login</button>
+               <p className="forgot">FORGOT PASSWORD ?</p>
+               <button
+                  type="submit"
+                  className="login"
+                  onClick={() => {
+                    
+                     navigate("/lay" );
+                  }}
+               >
+                  Login
+               </button>
             </form>
          </div>
       </div>
