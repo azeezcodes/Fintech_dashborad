@@ -34,18 +34,7 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+ 
   "devDependencies": {
     "@babel/preset-env": "^7.19.4",
     "@babel/preset-react": "^7.18.6",
