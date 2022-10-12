@@ -11,8 +11,8 @@ function App() {
    return (
       <Routes>
          <Route path="/" element={<Login />}></Route>
-         <Route path="/head" element={<Header />}></Route>
-         <Route path="/side" element={<Sidebar />}></Route>
+         {/* <Route path="/head" element={<Header />}></Route>
+         <Route path="/side" element={<Sidebar />}></Route> */}
          <Route path="/dashboard" element={<Win />}></Route>
          <Route path="/user" element={<Userinfo />}></Route>
       </Routes>

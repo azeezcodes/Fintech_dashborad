@@ -8,6 +8,7 @@ import Tablehead from "./Tablehead";
 
 import { BiFilter, BiDotsVerticalRounded } from "react-icons/bi";
 import OrganModal from "./OrganModal";
+import Viewdetail from "./Viewdetail";
 
 interface RNode {
    children: ReactNode;
@@ -18,6 +19,7 @@ let PageSize = 10;
 const Table = () => {
    const [Data, setData] = useState([]);
    const [show, setShow] = useState(false)
+   const [view, setView] = useState(false)
    const [currentPage, setCurrentPage] = useState(1);
 
    useEffect(() => {
@@ -48,6 +50,10 @@ const Table = () => {
 
    const showModal = () => {
    setShow(!show)
+}
+   const viewModal = () => {
+      setView(!view)
+    
 }
 
    return (
@@ -110,6 +116,7 @@ const Table = () => {
                      phoneNumber: string;
                      createdAt: string;
                   }) => {
+                     
                      return (
                         <tr className="tabRoll" key={item.id}>
                            <td>
@@ -124,6 +131,7 @@ const Table = () => {
                            </td>
                            <td>
                               <BiDotsVerticalRounded
+                                 onClick={viewModal}
                                  style={{ fontSize: "1.2rem" }}
                               />
                            </td>
@@ -131,6 +139,9 @@ const Table = () => {
                      );
                   }
                )}
+
+               <div className="viewing">{view && <Viewdetail />}</div>
+
             </tbody>
          </table>
          {/* <Pagination
@@ -140,7 +151,6 @@ const Table = () => {
             pageSize={PageSize}
             onPageChange={(page) => setCurrentPage(page)}
          /> */}
-         
       </div>
    );
 };

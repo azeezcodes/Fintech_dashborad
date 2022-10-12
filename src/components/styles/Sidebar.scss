@@ -1,7 +1,8 @@
 @import "./Variable.scss";
 .mainside {
    width: 16.5rem;
-   border: 1px solid #39cdcc;
+   border-right: 1px solid #d5d6d6;
+    
    height: calc(100vh - 5.5rem);
    overflow-y: auto;
 
