@@ -8,6 +8,12 @@
    height: 80vh;
    overflow: scroll;
 }
+ @media (max-width: 1000px) {
+   .tablebody{
+      width: 100vw;
+   }
+  }
+
 .boxwithicon {
    //background-color: red;
    width: 11rem;

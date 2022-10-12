@@ -76,3 +76,8 @@
 .pagechild{
     width: calc(100vw - 16.5rem)
 }
+ @media (max-width: 1000px) {
+  .search, .userlogo{
+      display: none;
+  }
+  }

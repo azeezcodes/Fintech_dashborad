@@ -5,7 +5,13 @@ import "./styles/Login.scss";
 
 const Login = () => {
 
-  let navigate = useNavigate();
+   let navigate = useNavigate();
+   
+   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      navigate("/dashboard");
+      console.log('working or not')
+   };
 
    return (
       <div className="whole">
@@ -15,7 +21,7 @@ const Login = () => {
          </div>
 
          <div className="page">
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
                <h1 className="welcometext"> Welcome!</h1>
                <p className="enter">Enter details to login</p>
 
@@ -33,14 +39,7 @@ const Login = () => {
                <PasswordInput placeholder="Password" name="password" />
 
                <p className="forgot">FORGOT PASSWORD ?</p>
-               <button
-                  type="submit"
-                  className="login"
-                  onClick={() => {
-                    
-                     navigate("/lay" );
-                  }}
-               >
+               <button type="submit" className="login">
                   Login
                </button>
             </form>
