@@ -5,10 +5,11 @@ import React, {
    useMemo,
 } from "react";
 import Tablehead from "./Tablehead";
-
+import { Link } from "react-router-dom";
 import { BiFilter, BiDotsVerticalRounded } from "react-icons/bi";
 import OrganModal from "./OrganModal";
 import Viewdetail from "./Viewdetail";
+import { log } from "console";
 
 interface RNode {
    children: ReactNode;
@@ -20,6 +21,8 @@ const Table = () => {
    const [Data, setData] = useState([]);
    const [show, setShow] = useState(false)
    const [view, setView] = useState(false)
+   const [loading, setLoading] = useState(true)
+   const [recordPage] = useState(6)
    const [currentPage, setCurrentPage] = useState(1);
 
    useEffect(() => {
@@ -32,12 +35,17 @@ const Table = () => {
             }
             return response.json();
          })
-         .then((actualData) => setData(actualData))
+         .then((actualData) => {setData(actualData);  setLoading(false);})
+      
          .catch((err) => {
             console.log(err.message);
          });
    }, []);
+   
+   
 
+
+   const indexofLastpage = currentPage * recordPage
 
     const currentTableData = useMemo(() => {
        const firstPageIndex = (currentPage - 1) * PageSize;
@@ -125,16 +133,19 @@ const Table = () => {
                            <td>{item.userName}</td>
                            <td>{item.email}</td>
                            <td>{item.phoneNumber}</td>
-                           <td>{item.createdAt}</td>
+                           <td>{new Date(item.createdAt).toDateString()}</td>
+
                            <td>
                               <p>Active</p>
                            </td>
-                           <td>
-                              <BiDotsVerticalRounded
-                                 onClick={viewModal}
-                                 style={{ fontSize: "1.2rem" }}
-                              />
-                           </td>
+                           <Link to={`/users/${item.id}`}>
+                              <td>
+                                 <BiDotsVerticalRounded
+                                    onClick={viewModal}
+                                    style={{ fontSize: "1.2rem" }}
+                                 />
+                              </td>
+                           </Link>
                         </tr>
                      );
                   }

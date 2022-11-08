@@ -1,14 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Layout from "../Layout";
 import { useNavigate } from "react-router-dom";
 import { CgArrowLongLeft } from "react-icons/cg";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
-import "./styles/Login.scss"
+import "./styles/Login.scss";
 import PersonalDetail from "./PersonalDetail";
 
-const Userinfo = () => {
 
-const navigate = useNavigate()
+
+type datatype = {
+   email?: string;
+   id?: number;
+   image?: string;
+   accountBalance?: string;
+   placeName?: string;
+   accountNumber?: string;
+   userName?: string;
+   phoneNumber?: string;
+};
+
+const Userinfo = () => {
+   const [Data, setData] = useState<datatype>({});
+   const params = useParams();
+
+   useEffect(() => {
+      fetch(`https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${params.id}`)
+         .then((response) => {
+            if (!response.ok) {
+               throw new Error(
+                  `This is an HTTP error: The status is ${response.status}`
+               );
+            }
+            return response.json();
+         })
+         .then((actualData) => {
+            setData(actualData);
+         })
+
+         .catch((err) => {
+            console.log(err.message);
+         });
+   }, []);
+
+    console.log( Data);
+
+   const navigate = useNavigate();
 
    return (
       <Layout>
@@ -36,8 +73,13 @@ const navigate = useNavigate()
                   <div className="cirlce">
                      <div className="avater"></div>
                      <div className="uname">
-                        <p className="ww">Grace Effiom</p>
-                        <p className="codeU">LSQFf587g90</p>
+                        <p
+                           className="ww"
+                           style={{ marginRight: "10px", marginLeft: "10px" }}
+                        >
+                           {Data?.userName}
+                        </p>
+                        <p className="codeU">{Data?.accountNumber}</p>
                      </div>
                   </div>
 
@@ -51,8 +93,10 @@ const navigate = useNavigate()
                   </div>
 
                   <div className="worth">
-                     <p className="ww">₦200,000.00</p>
-                     <p className="bank">9912345678/Providus Bank</p>
+                     <p className="ww">{`₦${Data?.accountBalance}`}</p>
+                     <p className="bank">
+                        {`${Data?.phoneNumber}/Providus Bank `}
+                     </p>
                   </div>
                </div>
 
